@@ -73,7 +73,7 @@ export default function Sidebar() {
           {/* Footer */}
           <div className="px-4 py-4 border-t border-gray-200 dark:border-gray-700">
             <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-              © 2024 AI Insights Dashboard
+              © 2025 AI Insights Dashboard
             </p>
           </div>
         </div>
