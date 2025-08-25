@@ -88,6 +88,15 @@ ai-insights-dashboard/
 └── package.json               # Dependencies and scripts
 ```
 
+## 🧭 Rendering Strategy
+
+- **Home (`src/app/page.tsx`)**: Server Component (static by default; no data fetching)
+- **Root layout (`src/app/layout.tsx`)**: Server Component; wraps a client `ThemeProvider`
+- **Analytics (`src/app/analytics/page.tsx`)**: Client Component (`'use client'`); CSR via `useEffect` fetch
+- **AI Tools (`src/app/ai-tools/page.tsx`)**: Client Component (`'use client'`); CSR with POST to API route
+- **UI components**: `src/components/Sidebar.tsx`, `src/components/TopNavbar.tsx`, `src/contexts/ThemeContext.tsx` are Client Components
+- **API route (`src/app/api/llm/route.ts`)**: Server Route Handler
+
 ## 🛠️ Getting Started
 
 ### **Prerequisites**
